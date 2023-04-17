@@ -86,7 +86,7 @@ const data = [
   },
   {
     slug: "the-wind-rises-3",
-    movie: "the Wind Rises",
+    movie: "The Wind Rises",
     quote: "“I will wait for you even if it takes a hundred years.”"
   },
   {

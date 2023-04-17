@@ -664,7 +664,7 @@ button {
 
 #ghibli-studios {
   overflow: hidden;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
 }
