@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+    <title>Love by Ghibli.</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <script src="./handlebars.min-v4.7.7.js"></script>
+    <script id="li-template" type="text/x-handlebars-template">
+      <li class="slider-item {{active}}" data-slug="{{slug}}">
+        <div class="grid vertical">
+          <div class="column-xs-12 column-md-2 hide-mobile">
+            <div class="intro">
+              <a href="#">
+                <h1 class="title"><span class="underline">{{movie}}</span></h1>
+              </a>
+            </div>
+          </div>
+          <div class="column-xs-12 column-md-10">
+            <div class="image-holder">
+              <img src="./images/{{slug}}.jpg">
+            </div>
+            <div class="grid">
+              <div class="column-xs-12 column-md-11">
+                <div class="intro show-mobile">
+                  <a href="#">
+                    <h1 class="title"><span class="underline">{{movie}}</span></h1>
+                  </a>
+                </div>
+                <p class="description">{{quote}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </script>
+</head>
+<body>
+ <nav class="flex-nav">
+    <div class="container">
+      <div class="grid">
+        <div class="column-xs-11">
+          <p id="logo"><span id="highlight">Love</span> by Ghibli.</p>
+        </div>
+        <div id="toggle-sound" class="column-xs-1">
+          <p>🔊</p>          
+        </div>
+      </div>
+    </div>
+  </nav>
+  <main class="intro-section">
+    <div class="container">
+      <div class="grid">
+        <div class="column-xs-12">
+          <ul class="slider">
+            <li class="slider-item active" data-slug="{{slug}}">
+              <div class="grid vertical">
+                <div class="column-xs-12 column-md-2 hide-mobile">
+                  <div class="intro">
+                    <a href="#">
+                      <h1 class="title"><span class="underline">Happy Birthday Lucía!</span></h1>
+                    </a>
+                  </div>
+                </div>
+                <div class="column-xs-12 column-md-10">
+                  <div class="image-holder">
+                    <img src="./images/cover.jpg">
+                  </div>
+                  <div class="grid">
+                    <div class="column-xs-12 column-md-11">
+                      <div class="intro show-mobile">
+                        <a href="#">
+                          <h1 class="title"><span class="underline">Happy Birthday Lucía!</span></h1>
+                        </a>
+                      </div>
+                      <p class="description">Some Ghibli quotes that teach us a thing or two about love...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="slider-item active">
+              <div class="grid vertical">
+                <div class="column-xs-12 column-md-2 hide-mobile">
+                  <div class="intro">
+                    <a href="#">
+                      <h1 class="title"><span class="underline">Movie</span></h1>
+                    </a>
+                  </div>
+                </div>
+                <div class="column-xs-12 column-md-10">
+                  <div class="image-holder">
+                    <img src="https://source.unsplash.com/cddaZDt6uRw">
+                  </div>
+                  <div class="grid">
+                    <div class="column-xs-12 column-md-9">
+                      <div class="intro show-mobile">
+                        <a href="#">
+                          <h1 class="title"><span class="underline">Movie</span></h1>
+                        </a>
+                      </div>
+                      <p class="description">Quote</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+            <!-- <li class="slider-item">
+              <div class="grid vertical">
+                <div class="column-xs-12 column-md-2 hide-mobile">
+                  <div class="intro">
+                    <a href="#">
+                      <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
+                    </a>
+                  </div>
+                </div>
+                <div class="column-xs-12 column-md-10">
+                  <div class="image-holder">
+                    <img src="https://source.unsplash.com/Pz3EHf-KJfc">
+                  </div>
+                  <div class="grid">
+                    <div class="column-xs-12 column-md-9">
+                      <div class="intro show-mobile">
+                        <a href="#">
+                          <h1 class="title"><span class="underline">Explore Kyoto</span></h1>
+                        </a>
+                      </div>
+                      <p class="description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+            <!-- <li class="slider-item">
+              <div class="grid vertical">
+                <div class="column-xs-12 column-md-2 hide-mobile">
+                  <div class="intro">
+                    <a href="#">
+                       <h1 class="title"><span class="underline">Explore Osaka</span></h1>
+                    </a>
+                  </div>
+                </div>
+                <div class="column-xs-12 column-md-10">
+                  <div class="image-holder">
+                    <img src="https://source.unsplash.com/peYW3VwICpE">
+                  </div>
+                  <div class="grid">
+                    <div class="column-xs-12 column-md-9">
+                      <div class="intro show-mobile">
+                        <a href="#">
+                          <h1 class="title"><span class="underline">Explore Osaka</span></h1>
+                        </a>
+                      </div>
+                      <p class="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+            <!-- <li class="slider-item">
+              <div class="grid vertical">
+                <div class="column-xs-12 column-md-2 hide-mobile">
+                  <div class="intro">
+                    <a href="#">
+                      <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
+                    </a>
+                  </div>
+                </div>
+                <div class="column-xs-12 column-md-10">
+                  <div class="image-holder">
+                    <img src="https://source.unsplash.com/VmeOZQjTVGE">
+                  </div>
+                  <div class="grid">
+                    <div class="column-xs-12 column-md-9">
+                      <div class="intro show-mobile">
+                        <a href="#">
+                          <h1 class="title"><span class="underline">Explore Hokkaido</span></h1>
+                        </a>
+                      </div>
+                      <p class="description">Hokkaido, the northernmost of Japan’s main islands, is known for its volcanoes, natural hot springs ("onsen") and ski areas.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+        <div class="grid">
+          <div class="column-xs-2"></div>
+          <div class="column-md-10 column-xs-12">
+            <div class="controls">
+                <button class="previous">
+                  <span class="visually-hidden">Previous</span>
+                  <span class="icon arrow-left" aria-hidden="true"></span>
+                </a>
+                <button class="next">
+                  <span class="visually-hidden">Next</span>
+                  <span class="icon arrow-right" aria-hidden="true"></span>
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <audio src="music.mp3" id="player"></audio>
+  <div id="ghibli-studios">
+    <img src="./images/ghibli.png">              
+  </div>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
