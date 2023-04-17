@@ -125,8 +125,8 @@ shuffle(data);
 
 data.push({
   image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
-  movie: "Not The End",
-  quote: "This is where your own story begins!"
+  movie: "The End...",
+  quote: "Or the beginning?"
 
 });
 
