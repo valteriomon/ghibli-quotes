@@ -1,116 +1,116 @@
 const data = [
   {
-    slug: "howls-moving-castle-1",
+    image: "./images/howls-moving-castle-1.jpg",
     movie: "Howl’s Moving Castle",
     quote: "“A heart’s a heavy burden.”"
   },
   {
-    slug: "spirited-away-2",
+    image: "./images/spirited-away-2.jpg",
     movie: "Spirited Away",
     quote: "“Once you’ve met someone you never really forget them.”"
   },
   {
-    slug: "howls-moving-castle-2",
+    image: "./images/howls-moving-castle-2.jpg",
     movie: "Howl’s Moving Castle",
     quote: "“One thing you can always count on is that hearts change.”"
   },
   {
-    slug: "the-secret-world-of-arrietty-5",
+    image: "./images/the-secret-world-of-arrietty-5.jpg",
     movie: "The Secret World of Arrietty",
     quote: "“Sometimes you have to fight for the things that are worth fighting for.”"
   },
   {
-    slug: "kikis-delivery-service-2",
+    image: "./images/kikis-delivery-service-2.jpg",
     movie: "Kiki’s Delivery Service",
     quote: "“Just follow your heart, and keep smiling.”"
   },
   {
-    slug: "princess-monoke-1",
+    image: "./images/princess-monoke-1.jpg",
     movie: "Princess Mononoke",
     quote: "“Well, they say that happy women make a happy village.”"
   },
   {
-    slug: "castle-in-the-sky-1",
+    image: "./images/castle-in-the-sky-1.jpg",
     movie: "Castle in the Sky",
     quote: "“The world cannot live without love.”"
   },
   {
-    slug: "whisper-of-the-heart-3",
+    image: "./images/whisper-of-the-heart-3.jpg",
     movie: "Whisper of the Heart",
     quote: "“Don’t worry. I’ll wait here till you’re done.”"
   },
   {
-    slug: "howls-moving-castle-3",
+    image: "./images/howls-moving-castle-3.jpg",
     movie: "Howl’s Moving Castle",
     quote: "“I don’t care if you’re a monster.”"
   },
   {
-    slug: "the-wind-rises-1",
+    image: "./images/the-wind-rises-1.jpg",
     movie: "The Wind Rises",
     quote: "“I asked the spring to bring you, to me.”"
   },
   {
-    slug: "the-secret-world-of-arrietty-4",
+    image: "./images/the-secret-world-of-arrietty-4.jpg",
     movie: "The Secret World Of Arrietty",
     quote: "“My heart is stronger now that you’re in it.”"
   },
   {
-    slug: "howls-moving-castle-4",
+    image: "./images/howls-moving-castle-4.jpg",
     movie: "Howl’s Moving Castle",
     quote: "“Sophie, you are beautiful.”"
   },
   {
-    slug: "my-neighbor-totoro-1",
+    image: "./images/my-neighbor-totoro-1.jpg",
     movie: "My Neighbor Totoro",
     quote: "“Totoro, I beg you, please protect Mei. She'll be lost, and probably scared. Please believe me, I'll be good for the rest of my life if I can just see her again.”"
   },
   {
-    slug: "the-wind-rises-2",
+    image: "./images/the-wind-rises-2.jpg",
     movie: "The Wind Rises",
     quote: "“I’ll keep holding your hand. You should sleep.”"
   },
   {
-    slug: "howls-moving-castle-5",
+    image: "./images/howls-moving-castle-5.jpg",
     movie: "Howl’s Moving Castle",
     quote: "“I’ve finally found someone I want to protect. You.”"
   },
   {
-    slug: "spirited-away-1",
+    image: "./images/spirited-away-1.jpg",
     movie: "Spirited Away",
     quote: "“Now go and don’t look back.”"
   },
   {
-    slug: "from-up-on-poppy-hill-5",
+    image: "./images/from-up-on-poppy-hill-5.jpg",
     movie: "From Up On Poppy Hill",
     quote: "“I guess we stop feeling how we feel. We’ll just have to go back to being friends.”"
   },
   {
-    slug: "the-wind-rises-3",
+    image: "./images/the-wind-rises-3.jpg",
     movie: "The Wind Rises",
     quote: "“I will wait for you even if it takes a hundred years.”"
   },
   {
-    slug: "the-secret-world-of-arrietty-3",
+    image: "./images/the-secret-world-of-arrietty-3.jpg",
     movie: "The Secret World Of Arrietty",
     quote: "“When I saw you, I just wanted to find a way to protect you.”"
   },
   {
-    slug: "whisper-of-the-heart-5",
+    image: "./images/whisper-of-the-heart-5.jpg",
     movie: "Whisper of the Heart",
     quote: "“I read all kinds of books so my name would be on the cards before yours.”"
   },
   {
-    slug: "grave-of-the-fireflies-1",
+    image: "./images/grave-of-the-fireflies-1.jpg",
     movie: "Grave of the Fireflies",
     quote: "“I don’t need anything. Please stay home with me.”"
   },
   {
-    slug: "ponyo-1",
+    image: "./images/ponyo-1.jpg",
     movie: "Ponyo",
     quote: "“I love Ponyo whether she’s a fish, a human, or something in between.”"
   },
   {
-    slug: "whisper-of-the-heart-7",
+    image: "./images/whisper-of-the-heart-7.jpg",
     movie: "Whisper of the Heart",
     quote: "“I know it’s too soon, but will you marry me?”"
   }
@@ -122,6 +122,14 @@ var template = Handlebars.compile(source);
 
 var itemsHtml = "";
 shuffle(data);
+
+data.push({
+  image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+  movie: "Not The End.",
+  quote: "Here is where you write your own story :)"
+
+});
+
 data.forEach((v,k,a) => {
   itemsHtml += template(v);
 });

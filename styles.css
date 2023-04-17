@@ -614,6 +614,7 @@ img {
   font-weight: 500;
   line-height: 1.1;
   text-decoration: none;
+  text-transform: uppercase;
   color: #000;
 }
 .intro .title .underline {
@@ -830,8 +831,9 @@ button {
     animation: fadeInLeft 0.8s 0.4s ease forwards;
   }
   .intro .title {
-    font-size: 2.65rem;
-    padding: 2.5rem 2.5rem 3rem 2.5rem;
+    font-size: 2.1rem;
+    font-weight: 700;
+    padding: 3rem;
     background: #00adef;
     border: 2px dashed white;
   }
