@@ -144,7 +144,6 @@ function showNextItem() {
   }
 
   items[count].classList.add('active');
-  console.log(count);
 }
 
 function showPreviousItem() {
@@ -157,8 +156,6 @@ function showPreviousItem() {
   }
 
   items[count].classList.add('active');
-  // Check if working...
-  console.log(count);
 }
 
 function keyPress(e) {
@@ -190,7 +187,18 @@ function shuffle(array) {
   return array;
 }
 
+const music = [
+  "castle-in-the-sky-the-girl-who-fell-from-the-sky.mp3",
+  "howls-moving-castle-merry-go-round-of-life .mp3",
+  "my-neighbor-totoro-path-of-the-wind-from.mp3",
+  "princess-mononoke -the-Legend-of-ashitaka.mp3",
+  "spirited-away-one-summers-day.mp3",
+];
+
+const song = music[Math.floor(Math.random() * music.length)];
+
 const player = document.querySelector('#player');
+player.src = "music/" + song;
 
 document.querySelector('#toggle-sound').addEventListener("click", () => {
   if (player.muted) {
