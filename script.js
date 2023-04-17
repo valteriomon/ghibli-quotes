@@ -193,15 +193,14 @@ function shuffle(array) {
 const player = document.querySelector('#player');
 
 document.querySelector('#toggle-sound').addEventListener("click", () => {
-  
   if (player.muted) {
     player.muted = false;
-    document.querySelector("#toggle-sound p").innerHTML = "🔊";
+    document.querySelector("#toggle-sound p").innerHTML = '<i data-feather="volume-2"></i>';
   } else {
-    document.querySelector("#toggle-sound p").innerHTML = "🔇";
     player.muted = true;
-    
+    document.querySelector("#toggle-sound p").innerHTML = '<i data-feather="volume-x"></i>';
   }
+  feather.replace();
 });
 
 document.addEventListener("click", ()=>{
@@ -209,3 +208,5 @@ document.addEventListener("click", ()=>{
     player.play();
   }
 })
+
+feather.replace()

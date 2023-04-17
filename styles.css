@@ -892,8 +892,6 @@ button {
 }
 
 #toggle-sound p {
-  font-size: 1.2rem;
-/*  margin: 1em 0;*/
   text-align: right;
-/*  cursor: pointer;*/
+  cursor: pointer;
 }
