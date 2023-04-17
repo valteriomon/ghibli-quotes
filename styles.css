@@ -663,6 +663,7 @@ button {
 }
 
 #ghibli-studios {
+  z-index: 9999;
   overflow: hidden;
   position: fixed;
   bottom: 0;
@@ -733,6 +734,11 @@ button {
 }
 .previous .icon, .next .icon {
   transition: transform 0.1s ease;
+}
+
+.image-holder img {
+  padding: 6px;
+  border: 2px dashed white;
 }
 
 .active .image-holder::before {
