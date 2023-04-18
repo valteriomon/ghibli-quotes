@@ -244,7 +244,7 @@ document.querySelector("#ghibli-studios").addEventListener("click", ()=>{
 function catrun() {
   var shock = document.createElement('div');
   var img = new Image()
-  img.src = 'https://i.imgur.com/QfJZlrI.gif';
+  img.src = './images/cat.gif';
   img.style.width = '450px'
   img.style.height = '350px'
   img.style.transition = '6s all linear'
