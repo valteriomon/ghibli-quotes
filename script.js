@@ -246,7 +246,7 @@ var times = 0;
 function catrun() {
   var shock = document.createElement('div');
   var img = new Image()
-  img.src = './images/cat.gif';
+  img.src = './images/black-cat-2.gif';
   img.style.width = '450px'
   img.style.height = '350px'
   img.style.transition = '6s all linear'
@@ -279,4 +279,4 @@ function catrun() {
 setInterval(function () {
   times++;
   catrun();
-}, 27000);
+}, 4000);
