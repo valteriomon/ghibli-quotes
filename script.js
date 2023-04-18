@@ -279,4 +279,4 @@ function catrun() {
 setInterval(function () {
   times++;
   catrun();
-}, 4000);
+}, 27000);
