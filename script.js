@@ -153,7 +153,6 @@ let count = 0;
 let globalCount = 0;
 
 function showNextItem() {
-  globalCount++;
   items[count].classList.remove('active');
 
   if(count < itemCount - 1) {
@@ -161,8 +160,6 @@ function showNextItem() {
   } else {
     count = 0;
   }
-
-  if(globalCount == 27) catrun();
 
   items[count].classList.add('active');
 }
@@ -233,6 +230,8 @@ document.querySelector('#toggle-sound').addEventListener("click", () => {
 });
 
 document.addEventListener("click", ()=>{
+  globalCount++;
+  if(globalCount == 27) catrun();
   if (player.paused) {
     player.play();
   }
