@@ -241,6 +241,8 @@ document.querySelector("#ghibli-studios").addEventListener("click", ()=>{
   cat.addEventListener("animationend", ()=>{cat.classList.remove("cat")}, false);
 })
 
+var times = 0;
+
 function catrun() {
   var shock = document.createElement('div');
   var img = new Image()
@@ -249,14 +251,24 @@ function catrun() {
   img.style.height = '350px'
   img.style.transition = '6s all linear'
   img.style.position = 'fixed'
-  img.style.left = '-400px'
-  img.style.bottom = '-30px'
+  img.style.bottom = '-40px'
   img.style.zIndex = 999999
+
+  if(times%2) {
+    img.style.left = '-400px'
+  } else {
+    img.style.right = '-400px'
+    img.style.transform = "scaleX(-1)"
+  }
 
   document.body.appendChild(img)
 
   window.setTimeout(function () {
-    img.style.left = 'calc(100% + 500px)'
+    if(times%2) {
+      img.style.left = 'calc(100% + 500px)'
+    } else {
+      img.style.right = 'calc(100% + 500px)'
+    }
   }, 50)
 
   window.setTimeout(function () {
@@ -264,4 +276,7 @@ function catrun() {
   }, 6000)
 }
 
-setTimeout(catrun, 27000);
+setInterval(function () {
+  times++;
+  catrun();
+}, 27000);
