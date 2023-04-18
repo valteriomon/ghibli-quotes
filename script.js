@@ -125,10 +125,15 @@ shuffle(data);
 
 const quotes = data.concat(
   [{
-    // image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
     image: "./images/miyazaki-hayao-2.jpg",
     movie: "Hayao Miyazaki",
     quote: "“I’ve become skeptical of the unwritten rule that just because a boy and girl appear in the same feature, a romance must ensue. Rather, I want to portray a slightly different relationship, one where the two mutually inspire each other to live; if I’m able to, then perhaps I’ll be closer to portraying a true expression of love.”"
+
+  },
+  {
+    image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+    movie: "The end...",
+    quote: "Or the beginning?"
 
   }
 ]);
@@ -229,3 +234,9 @@ document.addEventListener("click", ()=>{
 })
 
 feather.replace()
+
+document.querySelector("#ghibli-studios").addEventListener("click", ()=>{
+  const cat = document.querySelector("#animate");
+  cat.classList.add("cat");
+  cat.addEventListener("animationend", ()=>{cat.classList.remove("cat")}, false);
+})
