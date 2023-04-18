@@ -252,7 +252,7 @@ function catrun() {
   img.src = './images/black-cat-small.gif';
   img.style.width = '250px'
   img.style.height = '81px'
-  img.style.transition = `${screen.innerWidth/350}s all linear`
+  img.style.transition = `${window.innerWidth/350}s all linear`
   img.style.position = 'fixed'
   img.style.bottom = '0px'
   img.style.zIndex = 999999
