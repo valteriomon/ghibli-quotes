@@ -741,7 +741,7 @@ button {
 
 .image-holder img {
   padding: 6px;
-  border: 2px dashed white;
+  border: 2px solid white;
 }
 
 .active .image-holder::before {
@@ -958,6 +958,10 @@ button {
   }
 }
 
-.bday {
+.bday .title {
   cursor: pointer;
+}
+
+.bday .image-holder img {
+  width: auto;
 }

@@ -132,8 +132,8 @@ const quotes = data.concat(
   },
   {
     extraClass: "bday",
-    image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
-    movie: "Have a great day...",
+    image: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAQAAAAAYLlVAAAAO0lEQVR42u3OMQEAAAwCoNk/tIvhAwlIe1MREBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQWAceA3R/wXUjjnYAAAAASUVORK5CYII=",
+    movie: "Have a great day 🥳",
     quote: "And may none of your bacon burn!"
   }
 ]);
@@ -319,7 +319,7 @@ function activateBirthday() {
   
 }
 
-var bdayElements = document.getElementsByClassName("bday");
+var bdayElements = document.querySelectorAll(".bday .title");
 
 for (var i = 0; i < bdayElements.length; i++) {
   bdayElements[i].addEventListener("click", activateBirthday);
