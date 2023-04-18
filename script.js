@@ -150,8 +150,6 @@ const nextItem = document.querySelector('.next');
 const previousItem = document.querySelector('.previous');
 let count = 0;
 
-let globalCount = 0;
-
 function showNextItem() {
   items[count].classList.remove('active');
 
@@ -230,8 +228,6 @@ document.querySelector('#toggle-sound').addEventListener("click", () => {
 });
 
 document.addEventListener("click", ()=>{
-  globalCount++;
-  if(globalCount == 27) catrun();
   if (player.paused) {
     player.play();
   }
@@ -246,7 +242,7 @@ document.querySelector("#ghibli-studios").addEventListener("click", ()=>{
 })
 
 function catrun() {
-  var shock = document.createElement('div')
+  var shock = document.createElement('div');
   var img = new Image()
   img.src = 'https://i.imgur.com/QfJZlrI.gif';
   img.style.width = '450px'
@@ -254,7 +250,7 @@ function catrun() {
   img.style.transition = '6s all linear'
   img.style.position = 'fixed'
   img.style.left = '-400px'
-  img.style.bottom = '0px'
+  img.style.bottom = '-30px'
   img.style.zIndex = 999999
 
   document.body.appendChild(img)
@@ -267,3 +263,5 @@ function catrun() {
     img.parentNode.removeChild(img)
   }, 6000)
 }
+
+setTimeout(catrun, 27000);
