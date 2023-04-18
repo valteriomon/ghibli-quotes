@@ -16,11 +16,11 @@
     <script src="./handlebars.min-v4.7.7.js"></script>
     <script src="./feather.min.js"></script>
     <script id="li-template" type="text/x-handlebars-template">
-      <li class="slider-item {{active}}">
+      <li class="slider-item">
         <div class="grid vertical">
           <div class="column-xs-12 column-md-2 hide-mobile">
             <div class="intro">
-              <h1 class="title"><span class="underline">{{movie}}</span></h1>
+              <h1 class="title {{extraClass}}">{{movie}}</h1>
             </div>
           </div>
           <div class="column-xs-12 column-md-10">
@@ -30,7 +30,7 @@
             <div class="grid">
               <div class="column-xs-12 column-md-11">
                 <div class="intro show-mobile">
-                    <h1 class="title"><span class="underline">{{movie}}</span></h1>
+                    <h1 class="title {{extraClass}}">{{movie}}</h1>
                 </div>
               </div>
             </div>
@@ -67,7 +67,7 @@
               <div class="grid vertical">
                 <div class="column-xs-12 column-md-2 hide-mobile">
                   <div class="intro">
-                    <h1 class="title"><span class="underline">Happy Birthday Lucía!</span></h1>
+                    <h1 class="title">Happy birthday Lucía! 🥳</h1>
                   </div>
                 </div>
                 <div class="column-xs-12 column-md-10">
@@ -77,7 +77,7 @@
                   <div class="grid">
                     <div class="column-xs-12 column-md-11">
                       <div class="intro show-mobile">
-                        <h1 class="title"><span class="underline">Happy Birthday Lucía!</span></h1>
+                        <h1 class="title">Happy birthday Lucía! 🥳</h1>
                       </div>
                     </div>
                   </div>
@@ -86,7 +86,7 @@
               <div class="grid">
                 <div class="column-xs-12 column-md-2"></div>
                 <div class="column-xs-12 column-md-10">
-                  <p class="description"><i>Some Ghibli quotes that teach us a thing or two about love...</i></p>
+                  <p class="description"><i>Step into the magical universe of Studio Ghibli and discover a thing or two about love along&nbsp;the way!</i></p>
                 </div>
               </div>
             </li>
@@ -116,6 +116,7 @@
   <div class="canvas">
     <div id ="animate"></div>
   </div>
+  <audio id="the-beatles" src="music/birthday.mp3"></audio>
   <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>

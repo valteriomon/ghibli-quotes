@@ -618,9 +618,6 @@ img {
   line-height: 1.1;
   text-decoration: none;
   text-transform: uppercase;
-  color: #000;
-}
-.intro .title .underline {
   color: #fff;
 }
 
@@ -959,4 +956,8 @@ button {
     -o-transform: translateY(-2800px);
     transform: translateY(-2800px);
   }
+}
+
+.bday {
+  cursor: pointer;
 }

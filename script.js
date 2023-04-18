@@ -131,10 +131,10 @@ const quotes = data.concat(
 
   },
   {
+    extraClass: "bday",
     image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
-    movie: "The end...",
-    quote: "Or the beginning?"
-
+    movie: "Have a great day...",
+    quote: "And may none of your bacon burn!"
   }
 ]);
 
@@ -213,14 +213,17 @@ const music = [
 
 const song = music[Math.floor(Math.random() * music.length)];
 
+const beatles = document.getElementById("the-beatles");
 const player = document.querySelector('#player');
 player.src = "music/" + song;
 
 document.querySelector('#toggle-sound').addEventListener("click", () => {
   if (player.muted) {
+    beatles.muted = false;
     player.muted = false;
     document.querySelector("#toggle-sound p").innerHTML = '<i data-feather="volume-2"></i>';
   } else {
+    beatles.muted = true;
     player.muted = true;
     document.querySelector("#toggle-sound p").innerHTML = '<i data-feather="volume-x"></i>';
   }
@@ -247,11 +250,11 @@ function catrun() {
   var shock = document.createElement('div');
   var img = new Image()
   img.src = './images/black-cat-2.gif';
-  img.style.width = '450px'
-  img.style.height = '350px'
+  img.style.width = '372px'
+  img.style.height = '120px'
   img.style.transition = '6s all linear'
   img.style.position = 'fixed'
-  img.style.bottom = '-40px'
+  img.style.bottom = '-4px'
   img.style.zIndex = 999999
 
   if(times%2) {
@@ -280,3 +283,44 @@ setInterval(function () {
   times++;
   catrun();
 }, 27000);
+
+function activateBirthday() {
+  
+  var fadeTime = 1000;
+  var audioVolume = 1;
+
+  if(beatles.paused) {
+    var fadeAudioOut = setInterval(function () {
+      if (audioVolume > 0) {
+        audioVolume -= 0.1;
+        if (audioVolume < 0) {
+            audioVolume = 0;
+        }
+        player.volume = audioVolume;
+      } else {
+        clearInterval(fadeAudioOut);
+        player.pause();
+        beatles.play();
+        var fadeAudioIn = setInterval(function () {
+          if (audioVolume < 1) {
+            audioVolume += 0.1;
+            if (audioVolume > 1) {
+                audioVolume = 1;
+            }
+            beatles.volume = audioVolume;
+          } else {
+            clearInterval(fadeAudioIn);
+          }
+        }, fadeTime / 10);
+      }
+    }, fadeTime / 10);
+
+  }
+  
+}
+
+var bdayElements = document.getElementsByClassName("bday");
+
+for (var i = 0; i < bdayElements.length; i++) {
+  bdayElements[i].addEventListener("click", activateBirthday);
+}
