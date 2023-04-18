@@ -249,18 +249,18 @@ var times = 0;
 function catrun() {
   var shock = document.createElement('div');
   var img = new Image()
-  img.src = './images/black-cat-2.gif';
-  img.style.width = '372px'
-  img.style.height = '120px'
-  img.style.transition = '6s all linear'
+  img.src = './images/black-cat-small.gif';
+  img.style.width = '250px'
+  img.style.height = '81px'
+  img.style.transition = `${screen.innerWidth/350}s all linear`
   img.style.position = 'fixed'
-  img.style.bottom = '-4px'
+  img.style.bottom = '0px'
   img.style.zIndex = 999999
 
   if(times%2) {
-    img.style.left = '-400px'
+    img.style.left = '-100px'
   } else {
-    img.style.right = '-400px'
+    img.style.right = '-100px'
     img.style.transform = "scaleX(-1)"
   }
 
@@ -268,15 +268,15 @@ function catrun() {
 
   window.setTimeout(function () {
     if(times%2) {
-      img.style.left = 'calc(100% + 500px)'
+      img.style.left = 'calc(100% + 100px)'
     } else {
-      img.style.right = 'calc(100% + 500px)'
+      img.style.right = 'calc(100% + 100px)'
     }
   }, 50)
 
-  window.setTimeout(function () {
+  img.addEventListener("transitionend", () => {
     img.parentNode.removeChild(img)
-  }, 6000)
+  });
 }
 
 setInterval(function () {
