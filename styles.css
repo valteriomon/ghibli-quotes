@@ -921,7 +921,7 @@ button {
   z-index: 9999;
   position: fixed;
   transform: scale(0.5);
-  left: 10%;
+  left: 30%;
   bottom: -100px;
 }
 
