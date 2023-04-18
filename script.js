@@ -123,14 +123,17 @@ var template = Handlebars.compile(source);
 var itemsHtml = "";
 shuffle(data);
 
-data.push({
-  image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
-  movie: "The End...",
-  quote: "Or the beginning?"
+const quotes = data.concat(
+  [{
+    // image: "data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=",
+    image: "./images/miyazaki-hayao-2.jpg",
+    movie: "Hayao Miyazaki",
+    quote: "“I’ve become skeptical of the unwritten rule that just because a boy and girl appear in the same feature, a romance must ensue. Rather, I want to portray a slightly different relationship, one where the two mutually inspire each other to live; if I’m able to, then perhaps I’ll be closer to portraying a true expression of love.”"
 
-});
+  }
+]);
 
-data.forEach((v,k,a) => {
+quotes.forEach((v,k,a) => {
   itemsHtml += template(v);
 });
 
