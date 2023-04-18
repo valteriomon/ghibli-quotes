@@ -319,7 +319,7 @@ function activateBirthday() {
   
 }
 
-var bdayElements = document.querySelectorAll(".bday .title");
+var bdayElements = document.querySelectorAll(".bday");
 
 for (var i = 0; i < bdayElements.length; i++) {
   bdayElements[i].addEventListener("click", activateBirthday);
